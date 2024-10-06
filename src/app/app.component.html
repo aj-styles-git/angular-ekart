@@ -5,8 +5,13 @@
   </div>
   <div class="card-body">
     <p>This is the card content. You can add more details here.</p>
+    <!-- //Two way -->
+    <input [(ngModel)]="searchText" />
+    <!-- //One way only -> component to view only && view to component only -->
+    <input [value]="property_binding_name" (input)="onViewToComponent($event)" />
   </div>
   <div class="card-footer">
-    <button class="card-button">Learn More</button>
+    <button class="card-button">{{searchText}}</button>
+    <button class="card-button">{{property_binding_name}}</button>
   </div>
 </div>

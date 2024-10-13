@@ -1,12 +1,13 @@
-<!-- card.component.html -->
-<div class="unique-card">
-  <div class="card-header">
-    <h2>Card Title</h2>
-  </div>
-  <div class="card-body">
-    <p>This is the card content. You can add more details here.</p>
-  </div>
-  <div class="card-footer">
-    <button class="card-button">Learn More</button>
-  </div>
-</div>
+<!-- app.component.html -->
+<h1>Welcome to the Product Store</h1>
+<app-product-list></app-product-list>
+<ng-template #myTemplate>
+  <p> ng-template T his is hidden until we say so!</p>
+</ng-template>
+
+
+
+<ng-container *ngIf="true; else myTemplate">
+  <p>This will show if 'condition' is true.</p>
+  <p>Both these paragraphs are grouped but no extra HTML is added.</p>
+</ng-container>

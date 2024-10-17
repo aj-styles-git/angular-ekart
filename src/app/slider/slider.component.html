@@ -1,0 +1,23 @@
+<div class="slider-container">
+    <div class="slider">
+        
+      <div  class="slide">
+        <div class="box"  [ngStyle]="{'background-color': sliderArr[currentSlide]?.color}"></div>
+        <div class="caption">Slide {{sliderArr[currentSlide]?.color}} Caption</div>
+      </div>
+     
+      <!-- <div class="slide">
+        <div class="box" style="background-color: #7f7fff;"></div>
+        <div class="caption">Slide 2 Caption</div>
+      </div>
+      <div class="slide">
+        <div class="box" style="background-color: #7fff7f;"></div>
+        <div class="caption">Slide 3 Caption</div>
+      </div> -->
+    </div>
+  
+    <!-- Navigation buttons -->
+    <button class="prev" (click)="onSliderChange()">&#10094;</button>
+    <button class="next" (click)="onSliderNextChange()">&#10095;</button>
+  </div>
+  <h1>JJJJJJJJJJJJ ====={{sliderArr[currentSlide]?.color}}</h1>

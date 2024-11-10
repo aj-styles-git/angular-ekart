@@ -1,0 +1,149 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Layout and Structure */
+  .container-fluid {
+    background-color: #f5f7fa;
+    padding: 20px;
+  }
+  
+  .create_new {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .create_new h2 {
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .create_new ol {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .create_new ol li {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: #777;
+    background-color: #eaeaea;
+  }
+  
+  .create_new ol li.active-tab {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .create_form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .top_form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .top_form h2 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .form-select {
+    width: 250px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .form_field {
+    margin-top: 20px;
+  }
+  
+  .f_field {
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+  }
+  
+  .options {
+    margin-top: 10px;
+  }
+  
+  .radio_set_c {
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  .remove-btn img {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .add-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #007bff;
+  }
+  
+  .add-btn img {
+    margin-right: 8px;
+  }
+  
+  .form_bottom_main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .fixed_btn {
+    position: sticky;
+    bottom: 0;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  

@@ -11,7 +11,22 @@ export class JeeMainsFormComponent {
   selectedCountries: string[] = [];
 
   onInputChange(evt: any){
-    this.formObj[evt.target.name] = evt.target.value;
+    if(evt.target.name == 'image'){
+      this.formObj[evt.target.name] = evt.target.files[0];
+      if (evt.target.files[0]) {
+        const reader = new FileReader();
+  
+        // Preview the selected image
+        reader.onload = () => {
+          this.formObj['imagePreview'] = reader.result; // Update image preview
+        };
+  
+        reader.readAsDataURL(evt.target.files[0]); // Read the file as a data URL
+      }
+      
+    }else{
+      this.formObj[evt.target.name] = evt.target.value;
+    }
     console.log(this.formObj)
   }
   // Handle checkbox change event

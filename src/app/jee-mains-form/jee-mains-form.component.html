@@ -69,6 +69,35 @@
                 (change)="onCheckboxChange($event, country)"> <!-- Handle change event -->
             <label class="form-check-label">{{ country }}</label>
         </div>
+        <!-- Loop through the list of countries and generate checkboxes -->
+        <div class="form-check" *ngFor="let country of countries">
+            <input
+                class="form-check-input"
+                type="checkbox"
+                [checked]="selectedCountries.includes(country)"
+                (change)="onCheckboxChange($event, country)"> <!-- Handle change event -->
+            <label class="form-check-label">{{ country }}</label>
+        </div>
+
+        <div class="form-group">
+            <label for="imageInput">Choose an image:</label>
+            <input
+                type="file"
+                id="imageInput"
+                accept="image/*"
+                (change)="onInputChange($event)"
+                required
+                class="form-control-file"
+                name="image"  
+            />
+        </div>
+
+               <!-- Image preview -->
+               <div *ngIf="formObj.imagePreview">
+                <h5>Image Preview:</h5>
+                <img [src]="formObj.imagePreview" alt="Selected Image" class="img-thumbnail" style="max-width: 300px;" />
+            </div>
+    
 
         <!-- Submit Section -->
         <button type="submit" (click)="onSubmit()" class="btn btn-primary btn-block">Submit</button>

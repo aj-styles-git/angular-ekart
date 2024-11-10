@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <div class="new_consult other_new">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="create_new">
+            <h2>Create a new consultation form</h2>
+            <ol>
+              <li [ngClass]="{'active-tab': screenStatus === 1}">Title & Description</li>
+              <li [ngClass]="{'active-tab': screenStatus === 2}">Questions</li>
+              <li [ngClass]="{'active-tab': screenStatus === 3}">Options</li>
+              <li [ngClass]="{'active-tab': screenStatus === 4}">Review</li>
+            </ol>
+          </div>
+           <app-questions *ngIf="screenStatus == 1"></app-questions>
+           <app-ctitle-desc *ngIf="screenStatus == 2"></app-ctitle-desc>
+         
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="create_tab fixed_btn">
+    <div class="row align-items-center">
+      <div class="col-12 d-flex justify-content-between">
+        <span>
+          <button (click)="prevScreen()" class="btn cre_new">Back</button>
+        </span>
+        <span>
+          <button (click)="nextScreen()" type="button" class="btn cre_new">Next</button>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  
